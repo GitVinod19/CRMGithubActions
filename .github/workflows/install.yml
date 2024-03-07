@@ -1,2 +1,10 @@
-- name: powerplatform-actions
-  uses: microsoft/powerplatform-actions@v1.3.0
+on:
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: powerplatform-actions
+        uses: microsoft/powerplatform-actions@v1.3.0
