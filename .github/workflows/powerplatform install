@@ -1,0 +1,17 @@
+jobs:
+    builds:
+        runs-on: windows-latest   # alternate runner OS is: ubuntu-latest
+
+    steps:
+    - name: Install Power Platform Tools
+        uses: microsoft/powerplatform-actions/actions-install@v1
+
+    - name: Export Solution
+         uses: microsoft/powerplatform-actions/export-solution@v1
+      with:
+         environment-url: 'https://orga696181f.crm8.dynamics.com/'
+         user-name: 'admin@Dynamic996.onmicrosoft.com'
+         password-secret: ${{ secrets.MYPASSWORD }}
+         solution-name: DemoSolution
+         solution-output-file: 'DemoSolution.zip'
+         working-directory: 'out'
