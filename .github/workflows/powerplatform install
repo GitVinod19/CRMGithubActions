@@ -1,6 +1,6 @@
 jobs:
     builds:
-        runs-on: windows-latest   # alternate runner OS is: ubuntu-latest
+        runs-on: windows-latest
 
     steps:
     - name: Install Power Platform Tools
